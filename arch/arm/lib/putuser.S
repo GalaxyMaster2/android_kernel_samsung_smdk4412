@@ -31,7 +31,7 @@
 #include <asm/domain.h>
 
 ENTRY(__put_user_1)
-1:	T(strb)	r2, [r0]
+1: TUSER(strb)	r2, [r0]
 	mov	r0, #0
 	mov	pc, lr
 ENDPROC(__put_user_1)
@@ -60,7 +60,7 @@ ENTRY(__put_user_2)
 ENDPROC(__put_user_2)
 
 ENTRY(__put_user_4)
-4:	T(str)	r2, [r0]
+4: TUSER(str)	r2, [r0]
 	mov	r0, #0
 	mov	pc, lr
 ENDPROC(__put_user_4)
